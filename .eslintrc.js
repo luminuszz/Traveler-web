@@ -33,7 +33,9 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': [
       'warn',
@@ -46,7 +48,7 @@ module.exports = {
       'warn',
       {
         newlinesBetween: 'always',
-        groups: ['module', '/^@shared/', ['parent', 'sibling', 'index']],
+        groups: ['/^@shared/', 'module', ['parent', 'sibling', 'index']],
         alphabetize: { order: 'asc', ignoreCase: true },
       },
     ],
